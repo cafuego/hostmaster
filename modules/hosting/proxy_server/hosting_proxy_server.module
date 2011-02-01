@@ -1,0 +1,23 @@
+<?php
+/**
+ * @file Proxy server node type is defined here.
+ */
+
+/**
+ * Implementation of hook_hosting_service()
+ */
+function hosting_proxy_server_hosting_service() {
+  return array(
+    'varnish' => 'proxy',
+    'squid' => 'proxy',
+  );
+}
+
+function hosting_proxy_server_hosting_service_type() {
+  return array(
+    'proxy' => array(
+      'title' => t('Reverse Proxy'),
+    ),
+  );
+}
+

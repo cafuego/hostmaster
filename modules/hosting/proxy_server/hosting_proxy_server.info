@@ -1,0 +1,6 @@
+name = Proxy Server 
+description = Allow hostmaster to configure reverse proxy servers.
+package = Hosting
+dependencies[] = hosting
+
+core = 6.x

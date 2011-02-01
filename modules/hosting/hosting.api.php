@@ -9,6 +9,10 @@ function hook_hosting_service_type() {
       'title' => t('Web'), // Human-readable name
       'weight' => 0,       // Optional, defaults to 0
     ),
+    'proxy' => array(
+      'title' => t('Reverse Proxy'),
+      'weight' => 1,
+    ),
   );
 }
 
@@ -22,5 +26,7 @@ function hook_hosting_service_type() {
 function hook_hosting_service() {
   return array(
     'http' => 'apache',  // Service type => type
+    'proxy' => 'varnish',
+    'proxy' => 'squid',
   );
 }
